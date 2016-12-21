@@ -1,0 +1,49 @@
+---
+ layout: base
+ title: Home
+---
+
+<section id="intro" class="page-header main style1 dark fullscreen">
+  <div class="content">
+    <header>
+      <h2>Razzle Frazzle.</h2>
+    </header>
+    <p>Welcome to <strong>{{ site.title }}</strong>'s site or something.</p>
+    <footer>
+      <a href="#about" class="button style2 down">More</a>
+    </footer>
+  </div>
+</section>
+
+<section id="about" class="main style3 primary">
+  <div class="content">
+    <div class="box style1">
+      <header>
+        <h2>About Me</h2>
+      </header>
+
+      <p>Shklasd lkasd</p>
+    </div>
+  </div>
+	<!-- <a href="#work" class="button style2 down anchored">Next</a> -->
+</section>
+
+<section id="work" class="main style3 primary">
+  <div class="content">
+    <div class="box style1">
+      <header>
+        <h2>Past Projects</h2>
+        <p>descriptions or something.</p>
+      </header>
+    </div>
+
+    <div class="img-set">
+      {% for post in site.posts %}
+        {% capture cycle-class %}{% cycle 'from-left', 'from-right' %}{% endcapture %}
+        <article class="{{ cycle-class }}">
+          <a href="{{ post.url }}" class="image fit"><img src="/assets/images/thumbs/{{ post.thumbnail }}" title="{{ post.title }}" /></a>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

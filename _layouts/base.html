@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include _head.html %}
+
+  <body>
+    <header id="header">
+      <h1><a href="/">{{ site.title }}</a></h1>
+      <nav id="navigation">
+        <ul>
+          <li><a href="/#intro">Intro</a></li>
+          <li><a href="/#about">About</a></li>
+          <li><a href="/#work">Work</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    {{ content }}
+
+    <footer id="footer" class="site-footer">
+      <ul class="actions">
+        <li><a href="{{ site.author.linkedin }}" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+        <li><a href="{{ site.author.instagram }}" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+      </ul>
+
+      <ul class="menu">
+        <li class="muted">{{ site.author.name }} &copy; {{ site.time | date: "%Y" }}</li>
+      </ul>
+    </footer>
+
+    {% include _scripts.html %}
+  </body>
+</html>

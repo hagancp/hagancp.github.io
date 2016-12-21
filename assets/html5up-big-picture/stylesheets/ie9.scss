@@ -1,0 +1,57 @@
+---
+---
+
+@import 'html5up-big-picture/libs/vars';
+@import 'html5up-big-picture/libs/functions';
+@import 'html5up-big-picture/libs/mixins';
+
+/*
+	Big Picture by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+/* Loader */
+
+	body {
+		&:before,
+		&:after {
+			display: none !important;
+		}
+	}
+
+/* Gallery */
+
+	.gallery {
+		&:after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+
+		article {
+			float: left;
+		}
+	}
+
+/* Main */
+
+	.main {
+		&.fullscreen {
+			min-height: 0;
+		}
+
+		&.style1 {
+			> .content {
+				margin: 0 auto;
+			}
+		}
+	}
+
+/* Poptrox */
+
+	.poptrox-popup {
+		.loader {
+			display: none !important;
+		}
+	}

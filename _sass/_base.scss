@@ -1,0 +1,12 @@
+.column-left{ float: left; width: 31%; }
+.column-right{ float: right; width: 31%; }
+.column-center{ display: inline-block; width: 31%; }
+.column-right65{ float: right; width: 65.5%; }
+.column-left65{ float: left; width: 65.5%; }
+.column-left50{ float: left; width: 48.25%; }
+.column-right50{ float: right; width: 48.25%; }
+
+/* Override content width */
+.main > .content {
+  width: 60em;
+}
