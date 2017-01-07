@@ -6,7 +6,27 @@
 .column-left50{ float: left; width: 48.25%; }
 .column-right50{ float: right; width: 48.25%; }
 
+.main {
+  flex-flow: row wrap;
+  align-items: center;
+}
+
 /* Override content width */
 .main > .content {
   width: 60em;
+}
+
+.container {
+  &.small {
+    width: 45em;
+  }
+
+  &.big {
+    width: 75em;
+  }
+
+  &.full {
+    width: 100%;
+    max-width: 100%;
+  }
 }

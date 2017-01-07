@@ -1,4 +1,6 @@
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+# To start the server, run the following...
+#   jekyll serve
+# If you change this file, restart the server to see the changes.
 
 # Site settings
 title: Conor Hagan
@@ -8,6 +10,7 @@ description: > # A bunch of useless description details about how awesome this
 
 author:
     name: Conor Hagan
+    email: email@gmail.com
     linkedin: http://linkedin.com
     instagram: http://instagram.com
 
@@ -17,9 +20,11 @@ baseurl: ""
 url: ""
 permalink: none
 
+
 # Build settings
 markdown: kramdown
-# theme: agency-jekyll-theme
+kramdown:
+  parse_block_html: true
 
 sass:
   style: :compressed

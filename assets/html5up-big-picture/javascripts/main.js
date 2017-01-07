@@ -23,7 +23,7 @@
 			$all = $body.add($header);
 
 		// Disable animations/transitions until the page has loaded.
-			$body.addClass('is-loading');
+			//$body.addClass('is-loading');
 
 			$window.on('load', function() {
 				window.setTimeout(function() {
@@ -53,29 +53,19 @@
 
 				$window
 					.on('resize.ie-flexbox-fix', function() {
-
 						clearTimeout(IEResizeTimeout);
 
 						IEResizeTimeout = setTimeout(function() {
-
 							var wh = $window.height();
-
 							$main.each(function() {
-
 								var $this = $(this);
-
 								$this.css('height', '');
-
 								if ($this.height() <= wh)
 									$this.css('height', (wh - 50) + 'px');
-
 							});
-
 						});
-
 					})
 					.triggerHandler('resize.ie-flexbox-fix');
-
 			}
 
 		// Prioritize "important" elements on small.
@@ -207,7 +197,7 @@
 				.resize(function() {
 
 					// Disable animations/transitions.
-						$body.addClass('is-resizing');
+					$body.addClass('is-resizing');
 
 					window.clearTimeout(resizeTimeout);
 
@@ -231,7 +221,6 @@
 				.load(function() {
 					$window.trigger('resize');
 				});
-
 	});
 
 })(jQuery);
